@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>歩行音楽プロトタイプ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #bpm-display {
+            font-size: 6rem;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1;
+        }
+        #bpm-unit {
+            font-size: 1.5rem;
+            color: #888888;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #cccccc;
+            min-height: 40px;
+        }
+        #permission-button {
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #1e88e5;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        #permission-button:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="bpm-container" style="display: none;">
+            <p id="bpm-display">--</p>
+            <p id="bpm-unit">BPM</p>
+        </div>
+        <p id="status">ボタンを押してセンサーの利用を開始します</p>
+        <button id="permission-button">開始</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
